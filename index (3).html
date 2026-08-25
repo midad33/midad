@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مِداد | الشاب المسلم — رفيقك اليومي لمدة ٦٠ يومًا</title>
+<meta name="description" content="مِداد: نوت بوك عربي فاخر يرتّب يومك على مواقيت الصلاة لا الساعة. رحلة ٦٠ يومًا تجمع بين العبادة والعلم والعمل والصحة. الدفعة الأولى الآن متاحة للحجز.">
+<meta name="theme-color" content="#0D0B08">
+
+<meta property="og:title" content="مِداد | الشاب المسلم">
+<meta property="og:description" content="ليس الإنجاز مجرد أن تخطط ليومك... بل كيف تحوّل كل سعيٍ وحركةٍ فيه إلى عبادة بالنية.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_EG">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-dark:#0D0B08;
+    --bg-card-1:#16130F;
+    --bg-card-2:#1E1812;
+    --gold:#C9A24B;
+    --gold-deep:#9C7A2E;
+    --text-light:#EDE6D6;
+    --text-muted:#A69B7E;
+    --border:#3A311F;
+    --err-color:#E27878;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg-dark);
+    color:var(--text-light);
+    font-family:'Amiri', serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1100px; margin:0 auto; padding:0 24px; }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(13,11,8,0.85);
+    backdrop-filter:blur(6px);
+    border-bottom:0.5px solid var(--border);
+  }
+  header .wrap{
+    display:flex; align-items:center; justify-space-between;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .brand{ font-family:'Aref Ruqaa', serif; font-size:28px; font-weight:700; color:var(--gold); }
+  nav{ display:flex; gap:28px; }
+  nav a{ font-size:15px; color:var(--text-muted); transition:color .2s; }
+  nav a:hover{ color:var(--gold); }
+  @media (max-width:640px){ nav{ display:none; } }
+
+  /* ===== Hero ===== */
+  .hero{
+    min-height:85vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    background:radial-gradient(ellipse at 50% 30%, var(--bg-card-2), var(--bg-dark) 70%);
+    padding:60px 24px 40px;
+  }
+  .hero .wordmark{
+    font-family:'Aref Ruqaa', serif;
+    font-size:clamp(56px, 12vw, 110px);
+    font-weight:700;
+    color:var(--gold);
+    letter-spacing:2px;
+    line-height:1;
+  }
+  .hero .rule{
+    width:70px; height:1px; background:var(--gold); opacity:.6;
+    margin:22px auto;
+  }
+  .hero .tagline{
+    font-size:clamp(14px, 2.4vw, 18px);
+    color:var(--text-light);
+    letter-spacing:4px;
+    margin-bottom:6px;
+  }
+  .hero .subtitle{
+    font-size:15px; color:var(--gold-deep); margin-bottom:28px;
+  }
+  .hero .oneliner{
+    max-width:680px;
+    font-size:clamp(18px, 2.8vw, 22px);
+    color:var(--text-light);
+    margin-bottom:36px;
+    line-height:1.7;
+  }
+  .cta-row{
+    display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
+  }
+  .btn{
+    display:inline-block;
+    padding:14px 32px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:700;
+    font-family:'Amiri', serif;
+    cursor:pointer;
+    transition:opacity .2s, transform .2s;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--gold); color:var(--bg-dark); border:none; }
+  .btn-secondary{ border:1px solid var(--border); color:var(--text-light); }
+
+  /* ===== Section generic ===== */
+  section{ padding:80px 0; }
+  .section-title{
+    text-align:center;
+    font-size:clamp(28px, 4vw, 40px);
+    font-weight:700;
+    color:var(--text-light);
+    margin-bottom:14px;
+  }
+  .section-kicker{
+    text-align:center;
+    font-size:13px; letter-spacing:3px; color:var(--gold-deep);
+    margin-bottom:10px;
+  }
+  .section-lead{
+    text-align:center; max-width:620px; margin:0 auto 50px;
+    color:var(--text-muted); font-size:17px;
+  }
+
+  /* ===== Story ===== */
+  .story{ background:var(--bg-card-1); }
+  .story .wrap{ max-width:760px; }
+  .story p{ font-size:18px; color:var(--text-light); margin-bottom:22px; text-align:center; }
+  .story .quote{
+    margin-top:40px;
+    text-align:center;
+    font-size:22px;
+    color:var(--gold);
+    font-weight:700;
+    line-height:2;
+  }
+
+  /* ===== Features ===== */
+  .features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:24px;
+  }
+  .feature-card{
+    background:linear-gradient(160deg, var(--bg-card-1), var(--bg-card-2));
+    border:0.5px solid var(--border);
+    border-radius:12px;
+    padding:28px 22px;
+    text-align:center;
+  }
+  .feature-card svg{ width:34px; height:34px; margin:0 auto 16px; stroke:var(--gold); }
+  .feature-card h3{ font-size:18px; margin-bottom:8px; color:var(--text-light); }
+  .feature-card p{ font-size:14px; color:var(--text-muted); line-height:1.8; }
+
+  /* ===== Dynamic Slider Gallery with Arrows ===== */
+  .gallery-section { background: var(--bg-card-1); overflow: hidden; }
+  
+  .slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+
+  .slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .gallery-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+    background: var(--bg-dark);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .gallery-item:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--gold);
+    box-shadow: 0 8px 25px rgba(201, 162, 75, 0.15);
+  }
+
+  .gallery-img-box {
+    width: 100%;
+    height: 320px;
+    background: #1a1612;
+  }
+
+  .gallery-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: brightness(0.95);
+  }
+
+  .gallery-item:hover .gallery-img-box img {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(22, 19, 15, 0.85);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    backdrop-filter: blur(4px);
+  }
+
+  .slider-arrow:hover {
+    background: var(--gold);
+    color: var(--bg-dark);
+    border-color: var(--gold);
+  }
+
+  .slider-arrow-next { right: -22px; }
+  .slider-arrow-prev { left: -22px; }
+
+  @media (max-width: 850px) {
+    .gallery-item { flex: 0 0 calc((100% - 20px) / 2); }
+  }
+  @media (max-width: 550px) {
+    .gallery-item { flex: 0 0 100%; }
+    .slider-arrow-next { right: 5px; }
+    .slider-arrow-prev { left: 5px; }
+  }
+
+  /* Modal (Lightbox & Confirmation Alert) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 40px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .modal.show .modal-content {
+    transform: scale(1);
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    color: var(--text-light);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .modal-close:hover {
+    color: var(--gold);
+  }
+
+  /* Modal Confirmation Box */
+  .confirm-box {
+    background: linear-gradient(160deg, var(--bg-card-1), var(--bg-card-2));
+    border: 1px solid var(--gold);
+    border-radius: 16px;
+    padding: 30px 24px;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  }
+  .confirm-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+  .confirm-title {
+    font-size: 22px;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .confirm-desc {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+  .confirm-btn {
+    background: var(--gold);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Amiri', serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 28px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .confirm-btn:hover { background: #d8b056; }
+
+  /* ===== Niyyah highlight ===== */
+  .niyyah{
+    text-align:center;
+    background:radial-gradient(ellipse at 50% 50%, var(--bg-card-2), var(--bg-dark));
+  }
+  .niyyah blockquote{
+    max-width:700px; margin:0 auto;
+    font-size:clamp(20px, 3.2vw, 28px);
+    color:var(--gold);
+    font-weight:700;
+    line-height:2;
+  }
+  .niyyah cite{
+    display:block; margin-top:20px; font-style:normal;
+    font-size:14px; color:var(--text-muted);
+  }
+
+  /* ===== Video ===== */
+  .video{ background:var(--bg-dark); }
+  .video-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    max-width:1000px;
+    margin:0 auto;
+    align-items:start;
+  }
+  .video-block{ display:flex; flex-direction:column; gap:14px; }
+  .video-block-title{
+    text-align:center;
+    font-size:16px;
+    font-weight:700;
+    color:var(--gold);
+  }
+  .video-frame{
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:12px;
+    overflow:hidden;
+    border:0.5px solid var(--border);
+    background:var(--bg-card-1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  }
+  .video-frame iframe{ width:100%; height:100%; border:0; }
+  @media (max-width:800px){
+    .video-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ===== Booking / Form Section ===== */
+  .booking-card{
+    max-width:500px; margin:0 auto;
+    background:linear-gradient(160deg, var(--bg-card-1), var(--bg-card-2));
+    border:0.5px solid var(--border);
+    border-radius:16px;
+    padding:36px 28px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  }
+  .booking-banner {
+    text-align: center;
+    background: rgba(201,162,75,0.08);
+    border: 0.5px solid rgba(201,162,75,0.3);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 22px;
+    font-size: 15px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .form-group { margin-bottom: 16px; text-align: right; }
+  label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  input, select, textarea {
+    width: 100%;
+    background: var(--bg-dark);
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: 'Amiri', serif;
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  /* ===== Payment method field ===== */
+  .payment-options{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+  }
+  .payment-option{
+    position:relative;
+    display:flex; align-items:center; gap:10px;
+    background:var(--bg-dark);
+    border:0.5px solid var(--border);
+    border-radius:8px;
+    padding:10px 12px;
+    cursor:pointer;
+    transition:border-color .2s, background .2s;
+  }
+  .payment-option:hover{ border-color:var(--gold-deep); }
+  .payment-option input{ width:auto; accent-color:var(--gold); margin:0; }
+  .payment-option svg{ width:20px; height:20px; stroke:var(--gold); flex-shrink:0; }
+  .payment-option span{ font-size:13px; color:var(--text-light); }
+  .payment-option:has(input:checked){
+    border-color:var(--gold);
+    background:rgba(201,162,75,0.08);
+  }
+  @media (max-width:420px){
+    .payment-options{ grid-template-columns:1fr; }
+  }
+
+  .price-container {
+    margin: 22px 0 10px;
+    background: rgba(201,162,75,0.04);
+    border: 0.5px dashed rgba(201,162,75,0.25);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: right;
+  }
+  .launch-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--bg-dark);
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .price-row {
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+  .price-row strong { color: var(--gold); font-size: 18px; }
+  .shipping-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  
+  .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: var(--gold);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .submit-btn:hover { background: #d8b056; }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .form-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 16px;
+  }
+
+  /* ===== Reviews / Comments Section ===== */
+  .reviews-section{ background:var(--bg-card-1); }
+
+  .review-banner{
+    display:none;
+    max-width:600px; margin:0 auto 30px;
+    background:rgba(201,162,75,0.1);
+    border:0.5px solid var(--gold);
+    border-radius:10px;
+    padding:14px 18px;
+    text-align:center;
+    font-size:14px;
+    color:var(--gold);
+    font-weight:700;
+    position:relative;
+  }
+  .review-banner.show{ display:block; }
+  .review-banner .banner-close{
+    position:absolute; top:6px; left:10px;
+    cursor:pointer; color:var(--text-muted); font-size:16px;
+  }
+
+  .review-form-card{
+    max-width:600px; margin:0 auto 50px;
+    background:linear-gradient(160deg, var(--bg-card-2), var(--bg-card-1));
+    border:0.5px solid var(--border);
+    border-radius:16px;
+    padding:30px 26px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  }
+  .review-invite{
+    text-align:center;
+    font-size:15px;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:22px;
+    line-height:1.8;
+  }
+  .star-rating{
+    display:flex; flex-direction:row-reverse;
+    justify-content:center;
+    gap:6px;
+    font-size:30px;
+    margin-bottom:18px;
+  }
+  .star-rating input{ display:none; }
+  .star-rating label{
+    cursor:pointer;
+    color:var(--border);
+    transition:color .15s;
+    margin:0;
+  }
+  .star-rating input:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label{
+    color:var(--gold);
+  }
+  .review-error{
+    font-size:12px; color:var(--err-color); margin-top:8px; display:none;
+  }
+  .review-success{
+    font-size:13px; color:var(--gold); margin-top:14px; text-align:center; display:none;
+    line-height:1.7;
+  }
+
+  .reviews-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:20px;
+    max-width:1000px; margin:0 auto;
+  }
+  .review-card{
+    background:linear-gradient(160deg, var(--bg-card-2), var(--bg-dark));
+    border:0.5px solid var(--border);
+    border-radius:12px;
+    padding:20px;
+  }
+  .review-card-head{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:8px;
+  }
+  .review-name{ font-size:15px; font-weight:700; color:var(--text-light); }
+  .review-stars{ color:var(--gold); font-size:14px; letter-spacing:2px; }
+  .review-badge{
+    display:inline-block;
+    font-size:10px;
+    background:rgba(201,162,75,0.15);
+    color:var(--gold);
+    border:0.5px solid var(--gold-deep);
+    border-radius:4px;
+    padding:1px 6px;
+    margin-inline-start:6px;
+  }
+  .review-date{ font-size:11px; color:var(--text-muted); margin-bottom:10px; }
+  .review-text{ font-size:14px; color:var(--text-light); line-height:1.8; margin-bottom:12px; }
+  .review-media-item{
+    width:72px; height:72px;
+    border-radius:8px; overflow:hidden;
+    border:0.5px solid var(--border);
+    cursor:pointer;
+    background:var(--bg-dark);
+  }
+  .review-media-item img{ width:100%; height:100%; object-fit:cover; }
+  .reviews-empty{
+    text-align:center; color:var(--text-muted); font-size:14px;
+    grid-column:1/-1; padding:20px;
+  }
+  .reviews-loading{
+    text-align:center; color:var(--text-muted); font-size:13px;
+    grid-column:1/-1; padding:10px;
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    border-top:0.5px solid var(--border);
+    padding:50px 0 30px;
+    text-align:center;
+  }
+  footer .brand{ font-family:'Aref Ruqaa', serif; font-size:24px; margin-bottom:8px; }
+  footer .tagline{ font-size:13px; color:var(--text-muted); letter-spacing:2px; margin-bottom:20px; }
+  .social-row{ display:flex; gap:22px; justify-content:center; margin-bottom:26px; }
+  .social-row a{ font-size:14px; color:var(--text-muted); border-bottom:1px solid transparent; transition:.2s; }
+  .social-row a:hover{ color:var(--gold); border-color:var(--gold); }
+  .copyright{ font-size:12px; color:#5A5344; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">مِداد</div>
+    <nav>
+      <a href="#story">القصة</a>
+      <a href="#content">المحتوى</a>
+      <a href="#gallery">من الداخل</a>
+      <a href="#video">الفيديو</a>
+      <a href="#reviews">آراء المشترين</a>
+      <a href="#booking">الحجز</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wordmark">مِداد</div>
+  <div class="rule"></div>
+  <p class="tagline">وعي … عبادة … إنتاج</p>
+  <p class="subtitle">(الشاب المسلم)</p>
+  <p class="oneliner">«ليس الإنجاز مجرد أن تخطط ليومك... بل كيف تحوّل كل سعيٍ وحركةٍ فيه إلى عبادة بالنية»</p>
+  <div class="cta-row">
+    <a href="#booking" class="btn btn-primary">احجز نسختك الآن</a>
+    <a href="#story" class="btn btn-secondary">اعرف القصة</a>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <p class="section-kicker">لماذا صنعنا مِداد؟</p>
+    <h2 class="section-title" style="margin-bottom:34px;">رفيق يومي، لا مجرد دفتر</h2>
+    <p>
+      نحن نملك اليوم تطبيقات للتخطيط، وتقويمات، وملاحظات، ومئات الأدوات التي تقول لنا كيف ننظم يومنا.
+      ومع ذلك، قد يمر اليوم ونحن مشغولون جدًا، لكننا لا نعرف: هل اقتربنا فعلًا مما نريد؟
+    </p>
+    <p>
+      من هنا بدأت فكرة مِداد: رفيق يومي يساعدك أن تخطط، وتراجع، وتتعلم، وتتابع عاداتك،
+      وتعتني بصلتك بالله، وفي الوقت نفسه تتحرك في حياتك إلى الأمام.
+    </p>
+    <p class="quote">لأن المداد أثر… والكلمات التي نكتبها اليوم قد تصبح أثرًا في حياتنا غدًا.</p>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap">
+    <p class="section-kicker">ماذا يوجد داخل مِداد؟</p>
+    <h2 class="section-title">كل ما تحتاجه، ولا شيء زائد</h2>
+    <p class="section-lead">تعمّدنا ألا نجعل كل شيء مزدحمًا أمامك، لأن الهدف ليس أن تمتلئ الصفحة بالحقول، بل أن تستخدمها فعلًا.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
+        <h3>تخطيط بمواقيت الصلاة</h3>
+        <p>يومك مقسّم بعد الفجر والظهر والعصر والمغرب والعشاء، لا بالساعة.</p>
+      </div>
+
+      <div class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-7 2-7 2v14s3-2 7-2 7 2 7 2V5s-3-2-7-2z"/></svg>
+        <h3>بنك النيات</h3>
+        <p>أكثر من ٣٠ نية عملية تساعدك تحوّل أعمالك اليومية إلى عبادة.</p>
+      </div>
+
+      <div class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        <h3>متابعة العادات</h3>
+        <p>تتبّع يومي بسيط لعباداتك وعاداتك، بلا تعقيد أو ازدحام.</p>
+      </div>
+
+      <div class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+        <h3>مراجعات أسبوعية وشهرية</h3>
+        <p>وقفات دورية تساعدك ترى مسارك كاملًا، لا يومك فقط.</p>
+      </div>
+
+      <div class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <h3>ميثاقي مع نفسي</h3>
+        <p>صفحة تعهّد شخصي تبدأ بها رحلتك، بصياغة صادقة لا وعظية.</p>
+      </div>
+
+      <div class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+        <h3>رسالة لنفسك بعد ٦٠ يومًا</h3>
+        <p>تكتبها اليوم ولا تفتحها إلا في نهاية رحلتك — دائرة نفسية مكتملة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="wrap">
+    <p class="section-kicker">جولة بصرية</p>
+    <h2 class="section-title">نظرة من داخل مِداد</h2>
+    <p class="section-lead">تصميم هادئ، منظم، ومصمم خصيصاً ليرافق تفاصيل يومك المسلم بكل سلاسة. اضغط على أي صورة لتكبيرها.</p>
+
+    <div class="slider-wrapper">
+      <button class="slider-arrow slider-arrow-next" onclick="manualNext()" aria-label="التالي">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <div class="slider-container" id="sliderContainer">
+        <div class="slider-track" id="sliderTrack"></div>
+      </div>
+
+      <button class="slider-arrow slider-arrow-prev" onclick="manualPrev()" aria-label="السابق">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="imageModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<!-- Confirmation Alert Modal -->
+<div id="confirmModal" class="modal">
+  <div class="confirm-box">
+    <div class="confirm-icon">🎉</div>
+    <div class="confirm-title">تم تسجيل طلبك بنجاح!</div>
+    <div class="confirm-desc">
+      شكرًا لحجزك دفتر مِداد.<br>
+      جاري توجيهك الآن إلى الواتساب لإرسال بياناتك وإتمام التأكيد معك مباشرة.
+    </div>
+    <button class="confirm-btn" onclick="closeConfirmModal()">موافق، الانتقال للواتساب</button>
+  </div>
+</div>
+
+<section class="niyyah">
+  <div class="wrap">
+    <blockquote>
+      «كيف تحول كل خطوة وحركة في يومك إلى عبادة واستثمار للآخرة بالنية»
+      من فلسفة التخطيط الإيماني في مِداد
+    </blockquote>
+  </div>
+</section>
+
+<section class="video" id="video">
+  <div class="wrap">
+    <p class="section-kicker">شاهد القصة كاملة</p>
+    <h2 class="section-title" style="margin-bottom:40px;">مِداد، من الفكرة إلى يدك</h2>
+    <div class="video-grid">
+      <div class="video-block">
+        <p class="video-block-title">قصة مِداد... الرفيق اليومي للشاب المسلم</p>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/Zzc_FN3J3d0" title="قصة مِداد... الرفيق اليومي للشاب المسلم" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="video-block">
+        <p class="video-block-title">القصة الكاملة — كيف تستخدم المنتج</p>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/EARvNAQOmPI" title="القصة الكاملة — كيف تستخدم المنتج" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div class="wrap">
+    <p class="section-kicker">تجارب المشترين</p>
+    <h2 class="section-title" style="margin-bottom:14px;">آراء وصور من استخدموا مِداد</h2>
+    <p class="section-lead">شارك تجربتك وصور المنتج — تساعد الآخرين وتزيد من مصداقية المنتج!</p>
+
+    <div class="review-banner" id="reviewBanner">
+      <span class="banner-close" id="reviewBannerClose">&times;</span>
+      🎉 مراجعتك السابقة تم نشرها الآن على الموقع، شكرًا لمشاركتك!
+    </div>
+
+    <div class="review-form-card">
+      <p class="review-invite">أضف تقييمك وتجربتك مع مِداد</p>
+      <form id="reviewForm">
+        <div class="form-group">
+          <label for="review_name">اسمك</label>
+          <input type="text" id="review_name" required placeholder="اكتب اسمك أو لقبك">
+        </div>
+
+        <div class="form-group">
+          <label>تقييمك</label>
+          <div class="star-rating" id="starRating">
+            <input type="radio" name="rating" id="star5" value="5"><label for="star5" title="5">★</label>
+            <input type="radio" name="rating" id="star4" value="4"><label for="star4" title="4">★</label>
+            <input type="radio" name="rating" id="star3" value="3"><label for="star3" title="3">★</label>
+            <input type="radio" name="rating" id="star2" value="2"><label for="star2" title="2">★</label>
+            <input type="radio" name="rating" id="star1" value="1"><label for="star1" title="1">★</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review_text">تجربتك مع مِداد</label>
+          <textarea id="review_text" rows="3" required placeholder="شاركنا رأيك في المنتج..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="review_image">رابط صورة لتجربتك (اختياري)</label>
+          <input type="url" id="review_image" placeholder="مثال: رابط صورة من جوجل درايف أو إنستغرام">
+        </div>
+
+        <button type="submit" class="submit-btn" id="reviewSubmitBtn">إرسال تجربتي</button>
+        <div class="review-error" id="reviewError"></div>
+        <p class="review-success" id="reviewSuccess">تم استلام مراجعتك، شكرًا لك! ستظهر على الموقع بعد المراجعة من فريق مِداد.</p>
+      </form>
+    </div>
+
+    <div class="reviews-grid" id="reviewsGrid">
+      <p class="reviews-loading">جاري تحميل المراجعات...</p>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <p class="section-kicker">الدفعة الأولى</p>
+    <h2 class="section-title" style="margin-bottom:40px;">احجز نسختك الآن</h2>
+
+    <div class="booking-card">
+      <div class="booking-banner">
+        ✨ انضم للدفعة الأولى من مِداد وابدأ رحلة الوعي والإنجاز اليوم!
+      </div>
+
+      <form id="madadOrderForm" onsubmit="submitToGoogleForm(event)">
+        <div class="form-group">
+          <label for="cust_name">الاسم بالكامل</label>
+          <input type="text" id="cust_name" required placeholder="اكتب اسمك هنا">
+        </div>
+
+        <div class="form-group">
+          <label for="cust_phone">رقم الواتساب للتواصل والتأكيد</label>
+          <input type="tel" id="cust_phone" required placeholder="01xxxxxxxxx">
+        </div>
+
+        <div class="form-group">
+          <label for="cust_location">مكان التوصيل</label>
+          <select id="cust_location" required onchange="calculateTotal()">
+            <option value="" disabled selected>اختر مكان التوصيل...</option>
+            <option value="داخل مصر">داخل مصر</option>
+            <option value="خارج مصر">خارج مصر</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cust_copies">عدد النسخ المطلوبة</label>
+          <input type="number" id="cust_copies" min="1" value="1" required oninput="calculateTotal()" onchange="calculateTotal()">
+        </div>
+
+        <div class="form-group">
+          <label>طريقة الدفع</label>
+          <div class="payment-options">
+            <label class="payment-option">
+              <input type="radio" name="payment_method" value="انستاباي" required>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M7 15h3"/></svg>
+              <span>انستاباي</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment_method" value="محفظة إلكترونية" required>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2v-9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2H6a2 2 0 00-2 2v2"/><circle cx="16" cy="14" r="1.5"/></svg>
+              <span>محفظة إلكترونية</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment_method" value="بيبال" required>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h7a4 4 0 014 4c0 3-2 5-5 5H9l-1 6"/><path d="M9 13l-2 7"/></svg>
+              <span>بيبال</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment_method" value="الدفع عند الاستلام" required>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 12h18"/></svg>
+              <span>الدفع عند الاستلام</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cust_notes">العنوان أو الملاحظات (اختياري)</label>
+          <textarea id="cust_notes" rows="2" placeholder="المحافظة / الدولة / العنوان التفصيلي..."></textarea>
+        </div>
+
+        <div class="price-container">
+          <span class="launch-badge">عرض الإطلاق الحصري 🔥</span>
+          <div class="price-row" id="priceSummary">
+            الإجمالي: اختر مكان التوصيل للحساب
+          </div>
+          <div class="shipping-note">* السعر لا يشمل مصاريف الشحن</div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">احجز نسختك الآن</button>
+      </form>
+
+      <p class="form-note">سيتم حفظ البيانات وفتح الواتساب مباشرة لإتمام تأكيد طلبك.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">مِداد</div>
+    <div class="tagline">وعي … عبادة … إنتاج</div>
+    <div class="social-row">
+      <a href="https://youtube.com" target="_blank">يوتيوب</a>
+      <a href="https://facebook.com" target="_blank">فيسبوك</a>
+      <a href="https://instagram.com" target="_blank">إنستغرام</a>
+      <a href="https://tiktok.com" target="_blank">تيك توك</a>
+    </div>
+    <div class="copyright">جميع الحقوق محفوظة © مِداد 2026</div>
+  </div>
+</footer>
+
+<script>
+  // قائمة الصور
+  const notebookImages = [
+      { url: "images/IMG_3495.JPG" },
+      { url: "images/IMG_3496.JPG" },
+      { url: "images/IMG_3498.JPG" },
+      { url: "images/IMG_3508.JPG" },
+      { url: "images/IMG_3529.JPG" },
+      { url: "images/IMG_3530.JPG" },
+      { url: "images/IMG_3531.JPG" },
+      { url: "images/IMG_3533.JPG" },
+      { url: "images/IMG_3534.JPG" },
+      { url: "images/IMG_3536.JPG" },
+      { url: "images/IMG_3537.JPG" },
+      { url: "images/IMG_3538.JPG" },
+      { url: "images/IMG_3540.JPG" },
+      { url: "images/IMG_3541.JPG" },
+      { url: "images/IMG_3542.JPG" },
+      { url: "images/IMG_3543.JPG" },
+      { url: "images/IMG_3545.JPG" },
+      { url: "images/IMG_3546.JPG" },
+      { url: "images/IMG_3548.JPG" },
+      { url: "images/IMG_3549.JPG" },
+      { url: "images/IMG_3550.JPG" },
+      { url: "images/IMG_3552.JPG" },
+      { url: "images/IMG_3553.JPG" }
+    ];
+
+  const sliderTrack = document.getElementById('sliderTrack');
+  const sliderContainer = document.getElementById('sliderContainer');
+
+  notebookImages.forEach((img) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    
+    item.innerHTML = `
+      <div class="gallery-img-box">
+        <img src="${img.url}" alt="مِداد" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600/16130F/C9A24B?text=مِداد';">
+      </div>
+    `;
+
+    item.addEventListener('click', () => openModal(img.url));
+    sliderTrack.appendChild(item);
+  });
+
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function getVisibleItemsCount() {
+    if (window.innerWidth <= 550) return 1;
+    if (window.innerWidth <= 850) return 2;
+    return 3;
+  }
+
+  function updateSliderPosition() {
+    const visibleCount = getVisibleItemsCount();
+    const maxIndex = notebookImages.length - visibleCount;
+
+    if (currentIndex > maxIndex) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = maxIndex;
+
+    const itemWidth = sliderTrack.children[0].getBoundingClientRect().width;
+    const gap = 20;
+    const moveAmount = (itemWidth + gap) * currentIndex;
+
+    sliderTrack.style.transform = `translateX(${moveAmount}px)`;
+  }
+
+  function moveNext() {
+    currentIndex++;
+    updateSliderPosition();
+  }
+
+  function movePrev() {
+    currentIndex--;
+    updateSliderPosition();
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(moveNext, 3000);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+  }
+
+  function manualNext() {
+    moveNext();
+    startAutoSlide();
+  }
+
+  function manualPrev() {
+    movePrev();
+    startAutoSlide();
+  }
+
+  sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+  sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+  window.addEventListener('resize', updateSliderPosition);
+
+  startAutoSlide();
+
+  // Modal / Lightbox System
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+
+  function openModal(src) {
+    modal.classList.add('show');
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    modal.classList.remove('show');
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Confirmation Modal Controls
+  const confirmModal = document.getElementById('confirmModal');
+  let pendingWhatsappUrl = "";
+
+  function openConfirmModal(whatsappUrl) {
+    pendingWhatsappUrl = whatsappUrl;
+    confirmModal.classList.add('show');
+  }
+
+  function closeConfirmModal() {
+    confirmModal.classList.remove('show');
+    if (pendingWhatsappUrl) {
+      window.open(pendingWhatsappUrl, '_blank');
+      pendingWhatsappUrl = "";
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+      if (confirmModal.classList.contains('show')) closeConfirmModal();
+    }
+  });
+
+  // حساب المبلغ الإجمالي تلقائياً (لم يتغيّر منطق السعر إطلاقاً)
+  function getCalculatedTotalText() {
+    const location = document.getElementById('cust_location').value;
+    const copies = parseInt(document.getElementById('cust_copies').value) || 1;
+
+    if (!location) return "اختر مكان التوصيل للحساب";
+
+    if (location === "داخل مصر") {
+      return `${copies * 150} جنيه مصري (${copies} نسخة)`;
+    } else {
+      return `${copies * 10} دولار أمريكي (${copies} نسخة)`;
+    }
+  }
+
+  function calculateTotal() {
+    const summaryBox = document.getElementById('priceSummary');
+    const totalText = getCalculatedTotalText();
+    if (totalText === "اختر مكان التوصيل للحساب") {
+      summaryBox.innerHTML = `الإجمالي: ${totalText}`;
+    } else {
+      summaryBox.innerHTML = `الإجمالي: <strong>${totalText}</strong>`;
+    }
+  }
+
+  // إرسال البيانات لـ Google Form ثم فتح الواتساب مباشره للمستخدم
+  function submitToGoogleForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerText = "جاري تسجيل الحجز...";
+
+    const name = document.getElementById('cust_name').value;
+    const phone = document.getElementById('cust_phone').value;
+    const locationVal = document.getElementById('cust_location').value;
+    const copies = document.getElementById('cust_copies').value;
+    const notesVal = document.getElementById('cust_notes').value;
+    const totalText = getCalculatedTotalText();
+    const paymentMethodEl = document.querySelector('input[name="payment_method"]:checked');
+    const paymentMethod = paymentMethodEl ? paymentMethodEl.value : "غير محدد";
+
+    const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdNahrkkdRIs0PqiaiL1uAfmML8s3uqE35MVlGakPGU1dHutA/formResponse";
+    const formData = new FormData();
+    formData.append("entry.1250543120", name);
+    formData.append("entry.2075273833", phone);
+    formData.append("entry.1807369720", copies);
+
+    const fullNotes = `[مكان التوصيل: ${locationVal}] [طريقة الدفع: ${paymentMethod}] - ${notesVal || 'لا يوجد ملاحظات إضافية'}`;
+    formData.append("entry.418540168", fullNotes);
+
+    fetch(googleFormURL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    }).finally(() => {
+      const whatsappMsg = `السلام عليكم ورحمة الله وبركاته،\nأود حجز دفتر مِداد:\n\n- *الاسم:* ${name}\n- *الهاتف:* ${phone}\n- *مكان التوصيل:* ${locationVal}\n- *عدد النسخ:* ${copies}\n- *طريقة الدفع:* ${paymentMethod}\n- *الإجمالي:* ${totalText}\n- *الملاحظات/العنوان:* ${notesVal || 'لا يوجد'}`;
+      
+      const whatsappUrl = `https://wa.me/201556518997?text=${encodeURIComponent(whatsappMsg)}`;
+      
+      openConfirmModal(whatsappUrl);
+
+      document.getElementById('madadOrderForm').reset();
+      calculateTotal();
+      btn.disabled = false;
+      btn.innerText = "احجز نسختك الآن";
+    });
+  }
+
+  /* ==========================================================
+     قسم التعليقات والمراجعات — مربوط بـ Google Form + Google Sheet
+     ==========================================================
+     - الإرسال: يذهب مباشرة لنفس Google Form الذي أنشأته.
+     - النشر: يقوم صاحب الموقع بكتابة "نعم" يدويًا في عمود
+       "الموافقة" داخل الشيت المرتبط بالفورم.
+     - العرض: الموقع يقرأ الشيت (المنشور كـ CSV عام) تلقائيًا
+       عند فتح الصفحة، ويعرض فقط الصفوف المكتوب أمامها "نعم".
+     - إشعار المُرسِل: كل متصفح يحصل على "رمز جهاز" عشوائي يُحفظ
+       محليًا ويُرسل مع كل مراجعة. لو لاحظ الموقع أن إحدى
+       المراجعات المنشورة تحمل نفس رمز جهازه، يظهر له بانر
+       "تم نشر مراجعتك" — تلقائيًا وبدون خادم أو بريد.
+     ========================================================== */
+
+  const REVIEW_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeDG5K4-bMjZJmW_tgh3UZ0lcSqqvLiDDXGsidctWuTaYbSAA/formResponse";
+  const REVIEW_ENTRY_NAME = "entry.124551494";
+  const REVIEW_ENTRY_RATING = "entry.921610571";
+  const REVIEW_ENTRY_TEXT = "entry.890805164";
+  const REVIEW_ENTRY_IMAGE = "entry.906401354";
+  const REVIEW_ENTRY_DEVICE = "entry.179483544";
+
+  const REVIEWS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrnTs-qyKhkHeZLnT6galy6wbRHY6LLr-BwnY5N3r5e-bs2YqeLfCLqEstkzIC5emaEaMqEgLL0OFS/pub?gid=1024262947&single=true&output=csv";
+
+  const MIN_SECONDS_BETWEEN_SUBMITS = 30;
+
+  // ---- رمز الجهاز المحلي (لا يُستخدم لأي غرض آخر) ----
+  function getDeviceCode() {
+    let code = localStorage.getItem('madad_device_code');
+    if (!code) {
+      code = 'd_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+      localStorage.setItem('madad_device_code', code);
+    }
+    return code;
+  }
+
+  function getMyReviewTexts() {
+    try {
+      return JSON.parse(localStorage.getItem('madad_my_review_texts') || '[]');
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function rememberMyReview(text) {
+    const list = getMyReviewTexts();
+    list.push(text.trim());
+    localStorage.setItem('madad_my_review_texts', JSON.stringify(list));
+  }
+
+  function getSeenPublishedTexts() {
+    try {
+      return JSON.parse(localStorage.getItem('madad_seen_published_texts') || '[]');
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function markSeenPublished(text) {
+    const list = getSeenPublishedTexts();
+    list.push(text.trim());
+    localStorage.setItem('madad_seen_published_texts', JSON.stringify(list));
+  }
+
+  // ---- إرسال مراجعة جديدة ----
+  const reviewForm = document.getElementById('reviewForm');
+  const reviewErrorBox = document.getElementById('reviewError');
+  const reviewSuccessBox = document.getElementById('reviewSuccess');
+
+  function showReviewError(msg) {
+    reviewErrorBox.textContent = msg;
+    reviewErrorBox.style.display = 'block';
+    reviewSuccessBox.style.display = 'none';
+  }
+
+  function canSubmitReviewNow() {
+    const last = parseInt(localStorage.getItem('madad_last_review_ts') || '0', 10);
+    return (Date.now() - last) >= MIN_SECONDS_BETWEEN_SUBMITS * 1000;
+  }
+
+  reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    reviewErrorBox.style.display = 'none';
+    reviewSuccessBox.style.display = 'none';
+
+    const name = document.getElementById('review_name').value.trim();
+    const ratingEl = document.querySelector('input[name="rating"]:checked');
+    const text = document.getElementById('review_text').value.trim();
+    const imageUrl = document.getElementById('review_image').value.trim();
+
+    if (!ratingEl) {
+      showReviewError('من فضلك اختر تقييمًا بالنجوم.');
+      return;
+    }
+    if (!canSubmitReviewNow()) {
+      showReviewError('من فضلك انتظر قليلًا قبل إرسال مراجعة أخرى.');
+      return;
+    }
+
+    const btn = document.getElementById('reviewSubmitBtn');
+    btn.disabled = true;
+    btn.innerText = 'جاري الإرسال...';
+
+    const deviceCode = getDeviceCode();
+
+    const formData = new FormData();
+    formData.append(REVIEW_ENTRY_NAME, name);
+    formData.append(REVIEW_ENTRY_RATING, ratingEl.value);
+    formData.append(REVIEW_ENTRY_TEXT, text);
+    formData.append(REVIEW_ENTRY_IMAGE, imageUrl);
+    formData.append(REVIEW_ENTRY_DEVICE, deviceCode);
+
+    fetch(REVIEW_FORM_ACTION, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    }).finally(() => {
+      localStorage.setItem('madad_last_review_ts', Date.now().toString());
+      rememberMyReview(text);
+
+      reviewForm.reset();
+      reviewSuccessBox.style.display = 'block';
+      btn.disabled = false;
+      btn.innerText = 'إرسال تجربتي';
+    });
+  });
+
+  // ---- قراءة وعرض المراجعات المعتمدة من الشيت ----
+  function parseCSV(csvText) {
+    const rows = [];
+    let row = [];
+    let field = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < csvText.length; i++) {
+      const c = csvText[i];
+      if (inQuotes) {
+        if (c === '"') {
+          if (csvText[i + 1] === '"') { field += '"'; i++; }
+          else { inQuotes = false; }
+        } else {
+          field += c;
+        }
+      } else {
+        if (c === '"') inQuotes = true;
+        else if (c === ',') { row.push(field); field = ''; }
+        else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+        else if (c === '\r') { /* ignore */ }
+        else field += c;
+      }
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+
+    if (!rows.length) return [];
+    const headers = rows[0].map(h => h.trim());
+    return rows.slice(1).filter(r => r.length > 1 || r[0]).map(r => {
+      const obj = {};
+      headers.forEach((h, idx) => { obj[h] = (r[idx] || '').trim(); });
+      return obj;
+    });
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+
+  function renderReviews(rows) {
+    const grid = document.getElementById('reviewsGrid');
+    const published = rows.filter(r => (r['الموافقة'] || '').trim() === 'نعم');
+
+    if (!published.length) {
+      grid.innerHTML = '<p class="reviews-empty">كن أول من يشارك تجربته مع مِداد!</p>';
+      return;
+    }
+
+    grid.innerHTML = '';
+    published.forEach(r => {
+      const name = r['الاسم'] || 'مشترٍ';
+      const rating = parseInt(r['التقييم'] || '5', 10) || 5;
+      const text = r['نص المراجعة'] || '';
+      const imageUrl = r['رابط صورة (اختياري)'] || r['رابط صورة'] || '';
+      const timestamp = r['طابع زمني'] || '';
+
+      const card = document.createElement('div');
+      card.className = 'review-card';
+
+      const starsStr = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+      const featuredBadge = rating >= 5 ? '<span class="review-badge">مراجعة مميزة</span>' : '';
+
+      let mediaHtml = '';
+      if (imageUrl) {
+        mediaHtml = `<div class="review-media-item" data-src="${escapeHtml(imageUrl)}"><img src="${escapeHtml(imageUrl)}" alt="صورة تجربة المستخدم" loading="lazy"></div>`;
+      }
+
+      card.innerHTML = `
+        <div class="review-card-head">
+          <span class="review-name">${escapeHtml(name)}${featuredBadge}</span>
+          <span class="review-stars">${starsStr}</span>
+        </div>
+        <div class="review-date">${escapeHtml(timestamp)}</div>
+        <div class="review-text">${escapeHtml(text)}</div>
+        ${mediaHtml}
+      `;
+
+      const mediaEl = card.querySelector('.review-media-item');
+      if (mediaEl) {
+        mediaEl.addEventListener('click', () => openModal(mediaEl.getAttribute('data-src')));
+      }
+
+      grid.appendChild(card);
+    });
+  }
+
+  function checkMyPublishedReviews(rows) {
+    const myTexts = getMyReviewTexts();
+    if (!myTexts.length) return;
+
+    const seen = getSeenPublishedTexts();
+    const deviceCode = getDeviceCode();
+
+    const newlyPublished = rows.some(r => {
+      const isApproved = (r['الموافقة'] || '').trim() === 'نعم';
+      const rowDevice = (r['رمز الجهاز (مخفي)'] || r['رمز الجهاز'] || '').trim();
+      const rowText = (r['نص المراجعة'] || '').trim();
+      return isApproved && rowDevice === deviceCode && !seen.includes(rowText);
+    });
+
+    if (newlyPublished) {
+      document.getElementById('reviewBanner').classList.add('show');
+      rows.forEach(r => {
+        const isApproved = (r['الموافقة'] || '').trim() === 'نعم';
+        const rowDevice = (r['رمز الجهاز (مخفي)'] || r['رمز الجهاز'] || '').trim();
+        const rowText = (r['نص المراجعة'] || '').trim();
+        if (isApproved && rowDevice === deviceCode) markSeenPublished(rowText);
+      });
+    }
+  }
+
+  document.getElementById('reviewBannerClose').addEventListener('click', () => {
+    document.getElementById('reviewBanner').classList.remove('show');
+  });
+
+  function loadReviews() {
+    fetch(REVIEWS_CSV_URL)
+      .then(res => res.text())
+      .then(csvText => {
+        const rows = parseCSV(csvText);
+        renderReviews(rows);
+        checkMyPublishedReviews(rows);
+      })
+      .catch(() => {
+        document.getElementById('reviewsGrid').innerHTML = '<p class="reviews-empty">تعذّر تحميل المراجعات حاليًا، حاول تحديث الصفحة.</p>';
+      });
+  }
+
+  loadReviews();
+</script>
+
+</body>
+</html>
